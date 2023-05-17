@@ -1,0 +1,100 @@
+.footer {
+    &-social {
+        ul {
+            display: flex;
+            gap: 1.5rem;
+
+            li {
+                &:hover {
+                    a {
+                        color: $clr-l-green;
+                        cursor: pointer;
+                    }
+                }
+
+                a {
+                    color: $clr-light;
+                    background-color: black;
+                    display: inline-block;
+                    padding: 1rem;
+                    border-radius: 5rem;
+                    width: 4rem;
+                    text-align: center;
+                }
+            }
+        }
+    }
+
+    &-notes {
+        margin-top: 2rem;
+
+        ul {
+            display: flex;
+            gap: 2rem;
+
+            li {
+                margin-right: 2rem;
+
+                a {
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+
+        p {
+            color: gray;
+            font-size: 1.5rem;
+        }
+    }
+
+    @include mediaQuery($break-lg) {
+        &-social {
+            ul {
+                display: flex;
+                gap: 1.5rem;
+
+                li {
+                    &:hover {
+                        a {
+                            color: $clr-l-green;
+                            cursor: pointer;
+                        }
+                    }
+
+                    a {
+                        color: $clr-light;
+                        background-color: black;
+                        display: inline-block;
+                        padding: 1rem;
+                        border-radius: 5rem;
+                        width: 4rem;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+        &-notes {
+            margin-top: 2rem;
+
+            ul {
+                li {
+                    margin: 2rem 0;
+
+                    a {
+                        &:hover {
+                            text-decoration: underline;
+                        }
+                    }
+                }
+            }
+            p {
+                color: gray;
+                font-size: 1.5rem;
+            }
+        }
+
+    }
+
+}

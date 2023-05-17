@@ -1,0 +1,227 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+.header {
+    padding: 2rem 0rem;
+    box-shadow: 0 4px 3px -1px rgba(0, 0, 0, .2);
+    position: relative;
+    z-index: 999;
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .branding {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+
+            img {
+                max-width: 100%;
+                height: 50px;
+            }
+
+            ul {
+                font-size: 1.5rem;
+                font-weight: 700;
+                display: flex;
+                gap: 2rem;
+                letter-spacing: .1rem;
+
+                li {
+                    a {
+                        color: black;
+
+                        &:hover {
+                            color: hsl(159, 100%, 19%);
+                        }
+                    }
+                    
+                }
+            }
+        }
+    }
+
+    &-nav {
+        display: flex;
+        align-items: center;
+        ul {
+            display: none;
+        }
+        .header-actions {
+            display: block;
+            ul {
+                display: flex;
+                gap: 2rem;
+                align-items: center;
+                font-size: 1.5rem;
+                font-weight: 600;
+                li {
+                    &:first-child {
+                        margin-right: 1rem;
+                        &:hover {
+                            color: hsl(159, 100%, 19%);
+                        }
+                        a {
+                            margin-left: 1rem;
+                            color: black;
+                            &:hover {
+                                margin-left: 1rem;
+                                color: hsl(159, 100%, 19%);
+                            }
+                        }
+                    }
+                    i {
+                        font-size: 2rem;
+                    }
+                }
+                .kamote{
+                    display: flex;
+                    .btn {
+                        width: 9rem;
+                        display: inline-block;
+                        padding: .5rem 1.5rem;
+                        border-radius: 5rem;
+                    }
+                    
+                    .btn.white {
+                        background: transparent;
+                        color: black;
+                        border: 1px solid black;
+                    }
+                    
+                    .btn.white:hover {
+                        background-color: #d8d8d8;
+                    }
+                    
+                    .btn.black {
+                        width: 10rem;
+                        background: black;
+                        color: white;
+                        border: 1px solid black;
+                    }
+                    .btn.black:hover {
+                        background: #d8d8d8;
+                        color: black;
+                    }
+                }
+            }
+        }
+    }
+
+    .toggle-menu{
+        display: none;
+    }
+
+    .toggle-menu span {
+        width: 3rem;
+        height: .3rem;
+        background-color: black;
+        display: block;
+        border-radius: 5rem;
+        transition: 0.5s ease;
+    }
+
+    .toggle-menu span:nth-child(2) {
+        margin: .5rem 0;
+    }
+
+    .toggle-menu.open span:first-child {
+        transform: translate(0, 10px) rotate(225deg);
+        transition: .5s ease;
+    }
+
+    .toggle-menu.open span:nth-child(2) {
+        opacity: 0;
+        transition: .5s ease;
+    }
+
+    .toggle-menu.open span:last-child {
+        transform: translate(0, -7px) rotate(-225deg);
+        transition: .5s ease;
+    }
+
+
+    @media screen and (max-width:500px) {
+        .toggle-menu {
+            display: block;
+            padding: 1.5rem 1rem;
+        }
+
+        .branding img {
+            height: 40px;
+        }
+
+        .toggle-menu:hover {
+            background-color: #c3bdbd;
+            padding: 1.5rem 1rem;
+            border-radius: 5rem;
+        }
+
+        .branding ul {
+            display: none;
+        }
+
+        .header-nav {
+            position: absolute;
+            top: 9rem;
+            left: 10rem;
+            width: 100%;
+            display: block;
+            max-height: 0rem;
+            overflow: hidden;
+            transition: .5s ease;
+            background-color: rgb(255, 255, 255);
+        }
+
+        .header-nav ul:first-child {
+            margin: 1rem 0;
+        }
+
+        .header-nav ul:first-child a {
+            color: black;
+            font-weight: 550;
+            margin-right: 30rem;
+        }
+        .header-nav ul:first-child a {
+            color: black;
+            font-weight: 550;
+            margin-right: 30rem;
+        }
+        .header-nav.open {
+            max-height: 45rem;
+            z-index: 5;
+            transition: .5s ease;
+        }
+        .header-nav .header-actions ul {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .header-nav .header-actions .kamote{
+            display: block;
+        }
+
+        .header-nav ul {
+            border-bottom: 1px solid rgba(0, 0, 0, .2);
+            left: 0;
+            display: block;
+            max-height: 80rem;
+            
+        }
+        .header-nav ul li {
+            padding: 2.3rem 0;
+            margin-left: 3rem;
+            font-weight: 600;
+        }
+        .header-nav ul li:hover {
+            cursor: pointer;
+        }
+        .header-nav:first-child {
+            color: black;
+        }
+        
+    }
+}
